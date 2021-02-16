@@ -11,6 +11,9 @@
     box-sizing: border-box;
 }
 
+html{
+    font-size: 93.75%;
+}
 
 body {
     background: #f0f2f5;
@@ -42,6 +45,24 @@ h2{
     color:var(--dark-blue);
     font-weight: normal;
 }
+
+/* Links and buttons =====================*/
+
+a {
+   color: #49aa26;
+    text-decoration: none;
+}
+
+.button.new{
+    display: inline-block;
+    margin-bottom: .8rem;
+
+}
+a:hover{
+    color:#3dd705;
+}
+
+
 
 /* HEADER =====================*/
 header {
@@ -98,8 +119,10 @@ header {
 /* TABLE =====================*/
 
 #data-table{
+    display: block;
     width:100%;
     border-spacing: 0 0.5rem;
+    overflow-x:auto;
 
 
 }
@@ -113,6 +136,10 @@ table tbody tr td:first-child{
 
 }
 
+table thead tr th:last-child,
+table tbody tr td:last-child{
+    border-radius: 0 0.25rem 0.25rem 0;
+}
 
 
 table th{
@@ -160,4 +187,18 @@ footer{
     padding: 4rem 0 2rem;
     color:var(--dark-blue);
     opacity: 0.6;
+}
+
+/* Responsive =====================*/
+
+@media(min-width:800px){
+    html{
+        font-size: 87.5%;
+    }
+
+    #balance{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 2rem;
+    }
 }
